@@ -1,0 +1,23 @@
+
+
+<div class="content" role="main">
+<!-- Angular -->
+list of locations:
+<ul  >
+  <li *ngFor="let location of locations; let i = index">
+    index: {{i}}
+    iss_position:
+    lat:{{location.iss_position.latitude}}
+    lng:{{location.iss_position.longitude}}
+    timestamp:{{location.timestamp}}
+    note:<span >{{location.note}} </span>
+  </li>
+</ul>
+<form>
+  <input name="note" [(ngModel)]="note" type="text" />
+  <button (click)="addNote()">Add Note</button>
+</form>
+</div>
+
+
+<!-- <router-outlet></router-outlet> -->
